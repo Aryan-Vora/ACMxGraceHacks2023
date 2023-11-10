@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import "../static/UploadEHR.css";
 
 function UploadEHR() {
   const [message, setMessage] = useState("");
@@ -22,8 +23,6 @@ function UploadEHR() {
       <h1>Upload EHR Page</h1>
       <p>Message from backend: {message}</p>
       <Link to="/">Go back Home</Link>
-      <Link to="/upload-ehr">Upload EHR</Link>
-      <Link to="/upload-medication">Upload Medication</Link>
     </div>
   );
 }

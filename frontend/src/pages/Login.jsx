@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "../static/Home.css";
-function Home() {
+import "../static/Auth.css";
+
+function Login() {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
@@ -19,15 +20,11 @@ function Home() {
   }, []);
   return (
     <div>
-      <h1>Home Page</h1>
+      <h1>Login</h1>
       <p>Message from backend: {message}</p>
       <Link to="/">Go back Home</Link>
-      <Link to="/upload-ehr">Upload EHR</Link>
-      <Link to="/upload-medication">Upload Medication</Link>
-      <Link to="/final-analysis">Final Analysis</Link>
-      <Link to="/auth">Login</Link>
     </div>
   );
 }
 
-export default Home;
+export default Login;
