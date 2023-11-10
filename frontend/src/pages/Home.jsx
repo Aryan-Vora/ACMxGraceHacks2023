@@ -15,23 +15,8 @@ function Home() {
       body: JSON.stringify({ name: "John" }),
     })
       .then((res) => res.json())
-      .then((data) => console.log(data.message));
+      .then((data) => setMessage(data.message));
   }, []);
-
-// Example call to backend OCR api
-useEffect(() => {
-  fetch("api/ocr", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    // put URL or filepath of image you want to test here
-    body: JSON.stringify({ url: "../ocr_test.png" }),
-  })
-    .then((res) => res.json())
-    .then((data) => setMessage(data.text)); // data.text is the text from the image
-}, []);
-
   return (
     <div>
       <h1>Home Page</h1>
@@ -42,6 +27,7 @@ useEffect(() => {
       <Link to="/final-analysis">Final Analysis</Link>
       <Link to="/login">Login</Link>
       <Link to="/signup">signup</Link>
+      <Link to="/example-ocr">Example OCR</Link>
     </div>
   );
 }

@@ -5,6 +5,7 @@ import UploadMedication from "./pages/UploadMedication";
 import FinalAnalysis from "./pages/FinalAnalysis";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import ExampleOCR from "./pages/ExampleOCR";
 function App() {
   return (
     <Router>
@@ -15,6 +16,7 @@ function App() {
         <Route path="/final-analysis" element={<FinalAnalysis />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/example-ocr" element={<ExampleOCR />} />
       </Routes>
     </Router>
   );
