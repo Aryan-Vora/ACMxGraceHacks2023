@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-function Home() {
+function UploadMedication() {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
@@ -19,7 +19,7 @@ function Home() {
   }, []);
   return (
     <div>
-      <h1>Home Page</h1>
+      <h1>Upload Medication Page</h1>
       <p>Message from backend: {message}</p>
       <Link to="/">Go back Home</Link>
       <Link to="/upload-ehr">Upload EHR</Link>
@@ -28,4 +28,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default UploadMedication;
