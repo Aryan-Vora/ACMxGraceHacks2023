@@ -25,7 +25,8 @@ function Home() {
       <Link to="/upload-ehr">Upload EHR</Link>
       <Link to="/upload-medication">Upload Medication</Link>
       <Link to="/final-analysis">Final Analysis</Link>
-      <Link to="/auth">Login</Link>
+      <Link to="/login">Login</Link>
+      <Link to="/signup">signup</Link>
     </div>
   );
 }

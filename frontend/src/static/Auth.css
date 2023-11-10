@@ -1,0 +1,84 @@
+.login-form-container {
+  width: 80%;
+  max-width: 300px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form-container form {
+  display: flex;
+  flex-direction: column;
+}
+.logo {
+  margin: auto;
+}
+.title {
+  color: #000;
+  font-family: Poppins;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.form-group {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.input-icon-container {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  position: absolute;
+  margin-left: 20px;
+}
+
+.form-group input {
+  width: 100%;
+  padding-left: 60px; /* Make room for the icon */
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #cce6ff;
+  color: #66b5ff;
+}
+.form-group input::placeholder {
+  color: #66b5ff;
+}
+button {
+  color: #e6f3ff;
+  font-family: Poppins;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 10px;
+  background-color: #1a90ff;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin-top: 40px;
+}
+
+button:hover {
+  background-color: #003d82;
+}
+
+.login-links {
+  text-align: center;
+  margin-top: 15px;
+}
+a {
+  text-decoration: none;
+  color: #1a90ff;
+  font-family: Poppins;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}

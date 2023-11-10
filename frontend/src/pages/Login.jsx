@@ -1,28 +1,59 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import "../static/Auth.css";
-
+import emailIcon from "../assets/mail.png";
+import passwordIcon from "../assets/key.png";
+import logoAndText from "../assets/logoAndText.png";
 function Login() {
-  const [message, setMessage] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  useEffect(() => {
-    // Fetch the message from the backend when the component mounts
-    // Add name as a parameter to the post request
-    fetch("api/hello", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ name: "John" }),
-    })
-      .then((res) => res.json())
-      .then((data) => setMessage(data.message));
-  }, []);
+  const handleSignIn = (e) => {
+    e.preventDefault();
+    // Handle sign in logic here
+    console.log("Email:", email, "Password:", password);
+  };
+
   return (
-    <div>
-      <h1>Login</h1>
-      <p>Message from backend: {message}</p>
-      <Link to="/">Go back Home</Link>
+    <div className="login-form-container">
+      <img src={logoAndText} alt="Logo" className="logo" />
+      <form onSubmit={handleSignIn}>
+        <h1 className="title">Sign In</h1>
+
+        <div className="form-group">
+          <div className="input-icon-container">
+            <img src={emailIcon} alt="Email" className="icon" />
+            <input
+              type="email"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Email Address"
+              required
+            />
+          </div>
+        </div>
+        <div className="form-group">
+          <div className="input-icon-container">
+            <img src={passwordIcon} alt="Password" className="icon" />
+            <input
+              type="password"
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Password"
+              required
+            />
+          </div>
+        </div>
+        <Link to="/signup">Forgot Password?</Link>
+
+        <button type="submit">Sign In</button>
+      </form>
+      <div className="login-links">
+        <p>Dont have an account yet? </p>
+        <Link to="/signup">Sign up</Link>
+      </div>
     </div>
   );
 }
