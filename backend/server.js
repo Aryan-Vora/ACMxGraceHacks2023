@@ -8,4 +8,8 @@ app.use(express.json());
 app.post("/hello", (req, res) => {
   res.json({ message: "Hello " + req.body.name });
 });
+
+const ocrRouter = require("./ocr");
+app.use("/ocr", ocrRouter);
+
 app.listen(port, () => console.log(`Server running on port ${port}`));
