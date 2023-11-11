@@ -13,12 +13,14 @@ function FinalAnalysis() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ 
+      body: JSON.stringify({
         filepath: "./ehr.pdf",
-        ingredients: '''{
-        'metadata': 'Extra Strength Tylenol PM Acetaminophen, Diphenhydramine HCl',
-        'ingredients_list': 'Acetaminophen(500mg), Diphenhydramine Hci(25mg). Inactive Ingredients: Carnauba Wax, Crospovidone, Fd&C Blue 1 Aluminum Lake, Hypromellose, Magnesium Stearate, Microcrystalline Cellulose, Polyethylene Glycol, Polysorbate 80, Povidone, Pregelatinized Starch, Sodium Starch Glycolate, Stearic Acid, Titanium Dioxide'
-        }'''
+        ingredients: {
+          metadata:
+            "Extra Strength Tylenol PM Acetaminophen, Diphenhydramine HCl",
+          ingredients_list:
+            "Acetaminophen(500mg), Diphenhydramine Hci(25mg). Inactive Ingredients: Carnauba Wax, Crospovidone, Fd&C Blue 1 Aluminum Lake, Hypromellose, Magnesium Stearate, Microcrystalline Cellulose, Polyethylene Glycol, Polysorbate 80, Povidone, Pregelatinized Starch, Sodium Starch Glycolate, Stearic Acid, Titanium Dioxide",
+        },
       }),
     })
       .then((res) => res.json())
