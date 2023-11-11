@@ -36,9 +36,6 @@ function Landing() {
           <img src={Robo} alt="Robo"></img>
           <h2 className="feature-text">Powered by AI</h2>
         </div>
-        <div className="feature-arrow">
-          <img src={downarrow} alt="Down Arrow"></img>
-        </div>
       </div>
       <div className="get-started-container">
         <Link className="get-started" to="/login">
