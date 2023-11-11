@@ -41,7 +41,7 @@ function Landing() {
         </div>
       </div>
       <div className="get-started-container">
-        <Link className="get-started" to="/signup">
+        <Link className="get-started" to="/login">
           Get Started
         </Link>
       </div>
