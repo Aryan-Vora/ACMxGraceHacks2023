@@ -2,7 +2,7 @@ import { useState } from "react";
 import "../static/UploadEHR.css";
 import { pdfjs } from "react-pdf";
 import { useNavigate } from "react-router-dom"; // Import useNavigate from react-router-dom
-
+import { Link } from "react-router-dom";
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   "pdfjs-dist/build/pdf.worker.min.js",
   import.meta.url
@@ -51,9 +51,17 @@ function UploadEHR() {
     setFileDataUrl("");
     setIsModalVisible(false);
   };
-
+  const BackIcon = () => (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M19 12H5M12 19l-7-7 7-7"></path>
+    </svg>
+  );
+  
   return (
     <div className="background">
+<Link className="EHR-back-button" to="/dashboard">
+  <BackIcon />
+</Link>
       <div className="upload-container">
         <h1 className="EHR-title">Upload Medical Records</h1>
         <div className="uploadEHR-container">

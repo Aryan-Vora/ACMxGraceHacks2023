@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../static/UploadMedication.css";
 import { useNavigate } from "react-router-dom"; // Import useNavigate from react-router-dom
-
+import { Link } from "react-router-dom";
 function UploadMedication() {
   // State to store the selected file and its data URL
   const [selectedFile, setSelectedFile] = useState(null);
@@ -45,9 +45,17 @@ function UploadMedication() {
     setFileDataUrl("");
     setIsModalVisible(false);
   };
-
+  const BackIcon = () => (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M19 12H5M12 19l-7-7 7-7"></path>
+    </svg>
+  );
+  
   return (
     <div className="background">
+<Link className="EHR-back-button" to="/dashboard">
+  <BackIcon />
+</Link>
       <div className="upload-container">
         <h1 className="EHR-title">Upload Medication</h1>
         <div className="uploadEHR-container">

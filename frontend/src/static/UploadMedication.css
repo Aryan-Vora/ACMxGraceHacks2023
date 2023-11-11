@@ -7,6 +7,15 @@
   background-position: center;
   object-fit: cover;
 }
+.medication-back-button {
+  text-decoration: none;
+  padding-left: 10px;
+  color: black; /* Makes the text color always black */
+  position: relative; /* Enables positioning relative to its normal position */
+  top: 20px; /* Adjust this value to set the offset from the top */
+  left: 10px; /* Adjust this value to set the offset from the left */
+}
+
 .EHR-title {
   margin-top: 400px;
   margin: auto;
