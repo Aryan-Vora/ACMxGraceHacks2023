@@ -40,7 +40,7 @@ For setting up the api, these are the steps to follow:
    ```
 2. Install the required dependencies:
    ```
-   pip3 install
+   pip3 install -r requirements.txt
    ```
 3. Launch the development server(defaults to port 5000):
    ```
