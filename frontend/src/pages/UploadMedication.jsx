@@ -41,9 +41,6 @@ function UploadMedication() {
     setIsModalVisible(false);
     fetch("/api/download",{
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
       body: formData,
     })
       .then((res) => res.json())
