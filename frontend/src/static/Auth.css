@@ -95,7 +95,7 @@
 .signup-button {
   color: #e6f3ff;
   font-family: Poppins;
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -105,21 +105,19 @@
   border: none;
   cursor: pointer;
   margin-top: 20px;
-}
-
-.login-button button:hover {
-  background-color: #003d82;
+  width: 100%;
 }
 
 .login-links {
   text-align: center;
   margin-top: 15px;
 }
-.login-form-container a {
+.login-form-container a,
+.signup-form-container a {
   text-decoration: none;
   color: #1a90ff;
   font-family: Poppins;
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;

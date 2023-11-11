@@ -19,8 +19,10 @@ function Home() {
   }, []);
   return (
     <div>
-      <h1>Home Page</h1>
-      <p>Message from backend: {message}</p>
+      <h1>Site Map</h1>
+      <p>
+        Example message from backend: <strong>{message}</strong>
+      </p>
       <div className="list">
         <Link to="/">Go back Home</Link>
         <Link to="/upload-ehr">Upload EHR</Link>
@@ -28,7 +30,8 @@ function Home() {
         <Link to="/final-analysis">Final Analysis</Link>
         <Link to="/login">Login</Link>
         <Link to="/signup">Signup</Link>
-        <Link to="/example-ocr">Example OCR</Link>
+        <Link to="/dashboard">Dashboard</Link>
+        <Link to="/">Landing</Link>
       </div>
     </div>
   );

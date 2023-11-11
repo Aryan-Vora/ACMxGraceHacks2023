@@ -55,7 +55,7 @@ function UploadEHR() {
   return (
     <div className="background">
       <div className="upload-container">
-        <h1 className="title">Upload Medical Records</h1>
+        <h1 className="EHR-title">Upload Medical Records</h1>
         <div className="uploadEHR-container">
           <label htmlFor="file-upload" className="custom-file-upload">
             <div className="upload-icon"></div>
