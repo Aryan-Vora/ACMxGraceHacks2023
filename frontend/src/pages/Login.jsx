@@ -48,10 +48,12 @@ function Login() {
         </div>
         <Link to="/signup">Forgot Password?</Link>
 
-        <button type="submit">Sign In</button>
+        <button className="login-button" type="submit">
+          Sign In
+        </button>
       </form>
       <div className="login-links">
-        <p>Dont have an account yet? </p>
+        <p>Don&apos;t have an account yet? </p>
         <Link to="/signup">Sign up</Link>
       </div>
     </div>

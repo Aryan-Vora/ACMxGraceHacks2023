@@ -50,7 +50,27 @@
 .form-group input::placeholder {
   color: #66b5ff;
 }
-button {
+.terms {
+  transform: scale(2);
+  margin-right: 15px;
+  margin-left: 10px;
+  background-color: #f0f0f0;
+}
+.signup-button {
+  color: #e6f3ff;
+  font-family: Poppins;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 10px;
+  background-color: #1a90ff;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.login-button {
   color: #e6f3ff;
   font-family: Poppins;
   font-size: 0.75rem;

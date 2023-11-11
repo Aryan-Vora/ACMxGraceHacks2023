@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "../static/Home.css";
 function ExampleOCR() {
   const [message, setMessage] = useState("");
 
   // Example call to backend OCR api
-    useEffect(() => {
+  useEffect(() => {
     fetch("api/ocr", {
       method: "POST",
       headers: {
