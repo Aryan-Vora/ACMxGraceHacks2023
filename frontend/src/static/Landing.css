@@ -48,6 +48,7 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .get-started {
   padding: 10px 20px;
@@ -66,6 +67,7 @@
   font-weight: 700;
   line-height: normal;
   text-decoration: none;
+  font-family: "Trebuchet MS", Arial, sans-serif;
 }
 .get-started-container {
   display: flex;

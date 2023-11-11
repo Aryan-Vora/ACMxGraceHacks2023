@@ -51,11 +51,11 @@
   }
 }
 .title {
-  color: #000;
-  font-family: Poppins;
+  color: #1a90ff;
+  font-family: "Trebuchet MS", Arial, sans-serif;
   font-size: 1.5rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 300;
   line-height: normal;
 }
 .form-group {
@@ -94,8 +94,7 @@
 }
 .signup-button {
   color: #e6f3ff;
-  font-family: Poppins;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -106,17 +105,24 @@
   cursor: pointer;
   margin-top: 20px;
   width: 100%;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  letter-spacing: 0.05em;
 }
 
 .login-links {
   text-align: center;
   margin-top: 15px;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+}
+.acc {
+  margin-top: -2px;
+  margin-bottom: 3px;
 }
 .login-form-container a,
 .signup-form-container a {
   text-decoration: none;
   color: #1a90ff;
-  font-family: Poppins;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
   font-style: normal;
   font-weight: 700;

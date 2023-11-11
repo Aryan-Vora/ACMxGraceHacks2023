@@ -74,7 +74,7 @@ function Login() {
           </button>
         </form>
         <div className="login-links">
-          <p>Don&apos;t have an account yet? </p>
+          <p className="acc">Don&apos;t have an account yet? </p>
           <Link to="/signup">Sign up</Link>
         </div>
       </div>
