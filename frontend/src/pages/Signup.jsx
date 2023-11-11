@@ -5,6 +5,8 @@ import emailIcon from "../assets/mail.png";
 import passwordIcon from "../assets/key.png";
 import logo from "../assets/logo.png";
 import userIcon from "../assets/user.png";
+import { createClient } from "@supabase/supabase-js";
+
 function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -12,7 +14,13 @@ function Signup() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [agreeToTerms, setAgreeToTerms] = useState(false);
 
-  const handleSignUp = (e) => {
+  //supabase auth
+  const supabaseUrl = "https://qkmpjjcwnfeizdxapuin.supabase.co";
+  const supabaseKey =
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFrbXBqamN3bmZlaXpkeGFwdWluIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTk2NDY2NjAsImV4cCI6MjAxNTIyMjY2MH0.UjBM9rlwJdiPdJOR1CGUVU67wBcAVzwWHqL0-mFCjsg";
+  const supabase = createClient(supabaseUrl, supabaseKey);
+
+  const handleSignUp = async (e) => {
     e.preventDefault();
     if (password !== confirmPassword) {
       alert("Passwords do not match.");
@@ -32,6 +40,19 @@ function Signup() {
       agreeToTerms
     );
     // Handle sign up logic here
+    try {
+      const { data, error } = await supabase.auth.signUp({
+        email: email,
+        password: password,
+        data: {
+          name: fullName,
+        },
+      });
+      if (error) throw error;
+      alert("Check your email for verification link");
+    } catch (error) {
+      alert(error);
+    }
   };
 
   return (
