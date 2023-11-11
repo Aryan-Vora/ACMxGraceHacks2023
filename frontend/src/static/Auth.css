@@ -1,18 +1,54 @@
+.background {
+  background-image: url("../assets/background.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: auto;
+  height: 100vh;
+  background-position: center;
+  object-fit: cover;
+}
 .login-form-container {
   width: 80%;
   max-width: 300px;
   margin: auto;
-  padding: 20px;
   display: flex;
   flex-direction: column;
 }
-
+.signup-form-container {
+  width: 80%;
+  max-width: 300px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
 .login-form-container form {
   display: flex;
   flex-direction: column;
 }
-.logo {
+.login-logo {
   margin: auto;
+  margin-top: 20vh;
+  margin-bottom: -40px;
+}
+.signup-logo {
+  margin: auto;
+  margin-bottom: 10px;
+  width: 125px;
+  margin-top: 13vh;
+}
+@media (max-height: 650px) {
+  .signup-logo {
+    display: none;
+  }
+  .login-logo {
+    display: none;
+  }
+  .signup-form-container {
+    padding-top: 20vh;
+  }
+  .login-form-container {
+    padding-top: 30vh;
+  }
 }
 .title {
   color: #000;
@@ -70,22 +106,8 @@
   cursor: pointer;
   margin-top: 20px;
 }
-.login-button {
-  color: #e6f3ff;
-  font-family: Poppins;
-  font-size: 0.75rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  padding: 10px;
-  background-color: #1a90ff;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  margin-top: 40px;
-}
 
-button:hover {
+.login-button button:hover {
   background-color: #003d82;
 }
 
@@ -93,7 +115,7 @@ button:hover {
   text-align: center;
   margin-top: 15px;
 }
-a {
+.login-form-container a {
   text-decoration: none;
   color: #1a90ff;
   font-family: Poppins;
