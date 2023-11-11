@@ -8,15 +8,21 @@ function FinalAnalysis() {
   useEffect(() => {
     // Fetch the message from the backend when the component mounts
     // Add name as a parameter to the post request
-    fetch("api/hello", {
+    fetch("http://127.0.0.1:5000/result", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ name: "John" }),
+      body: JSON.stringify({ 
+        filepath: "./ehr.pdf",
+        ingredients: '''{
+        'metadata': 'Extra Strength Tylenol PM Acetaminophen, Diphenhydramine HCl',
+        'ingredients_list': 'Acetaminophen(500mg), Diphenhydramine Hci(25mg). Inactive Ingredients: Carnauba Wax, Crospovidone, Fd&C Blue 1 Aluminum Lake, Hypromellose, Magnesium Stearate, Microcrystalline Cellulose, Polyethylene Glycol, Polysorbate 80, Povidone, Pregelatinized Starch, Sodium Starch Glycolate, Stearic Acid, Titanium Dioxide'
+        }'''
+      }),
     })
       .then((res) => res.json())
-      .then((data) => setMessage(data.message));
+      .then((data) => setMessage(data.human_response));
   }, []);
   return (
     <div>
