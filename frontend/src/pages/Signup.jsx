@@ -113,7 +113,7 @@ function Signup() {
               />
             </div>
           </div>
-          <label>
+          <label className="agree">
             <input
               className="terms"
               type="checkbox"

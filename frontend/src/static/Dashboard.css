@@ -1,11 +1,15 @@
 .background {
   background-image: url("../assets/background.png");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
   width: auto;
   height: 100vh;
   background-position: center;
   object-fit: cover;
+}
+.logo {
+  background-color: transparent;
+}
+.logo img {
+  padding-top: 10vh;
 }
 .dash-title {
   margin-left: auto;
@@ -23,12 +27,12 @@
 }
 .dash-subtitle {
   color: #1a90ff;
-  font-family: Roboto;
+  font-family: "Trebuchet MS", Arial, sans-serif;
   font-size: 1.875rem;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 800;
   line-height: normal;
-  margin-bottom: 10vh;
+  margin-bottom: 5vh;
 }
 .dash-buttons {
   padding: 10px 20px;
@@ -66,12 +70,11 @@
   font-weight: 700;
   line-height: normal;
   text-decoration: none;
-  margin-top: 25vh;
+  margin-top: 5vh;
   margin-bottom: 20px;
 }
 .dash-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
 }

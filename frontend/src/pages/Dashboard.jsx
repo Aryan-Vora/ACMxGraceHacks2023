@@ -1,11 +1,15 @@
 import "../static/Dashboard.css";
 import { Link } from "react-router-dom";
+import LogoAndText from "../assets/LogoAndText.png";
 function Dashboard() {
   return (
     <div className="background">
-      <h1 className="dash-title">Dashboard</h1>
+      <div class="logo">
+        <img src={LogoAndText} alt="Logo"></img>
+      </div>
+
       <div className="dash-container">
-        <h1 className="dash-subtitle">Hello Amritha P</h1>
+        <h1 className="dash-subtitle">Welcome</h1>
 
         <Link className="dash-buttons" to="/upload-medication">
           Scan a Medication

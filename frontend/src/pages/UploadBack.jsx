@@ -2,7 +2,7 @@ import { useState } from "react";
 import "../static/UploadMedication.css";
 import { useNavigate } from "react-router-dom"; // Import useNavigate from react-router-dom
 import { Link } from "react-router-dom";
-function UploadMedication() {
+function UploadBack() {
   // State to store the selected file and its data URL
   const [selectedFile, setSelectedFile] = useState(null);
   const [fileDataUrl, setFileDataUrl] = useState("");
@@ -32,7 +32,7 @@ function UploadMedication() {
   const handleConfirmUpload = () => {
     // Implement file upload logic here
     setIsModalVisible(false);
-    navigate("/upload-back");
+    navigate("/final-analysis");
   };
 
   // Handler for canceling file upload
@@ -62,7 +62,7 @@ function UploadMedication() {
         <BackIcon />
       </Link>
       <div className="upload-container">
-        <h1 className="EHR-title">Upload Front Medication</h1>
+        <h1 className="EHR-title">Upload Back of Medication</h1>
         <div className="uploadEHR-container">
           <label htmlFor="file-upload" className="custom-file-upload">
             <div className="upload-icon"></div>
@@ -75,7 +75,7 @@ function UploadMedication() {
             type="file"
             accept="image/png, image/jpeg"
             onChange={handleFileChange}
-            style={{ display: "none" }} // Hide the actual file input
+            style={{ display: "none" }}
           />
         </div>
         <div className="filetype">Acceptable File Types: JPEG/PNG</div>
@@ -105,4 +105,4 @@ function UploadMedication() {
   );
 }
 
-export default UploadMedication;
+export default UploadBack;
