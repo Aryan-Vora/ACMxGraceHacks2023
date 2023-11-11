@@ -1,17 +1,37 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../static/Auth.css";
 import emailIcon from "../assets/mail.png";
 import passwordIcon from "../assets/key.png";
 import logoAndText from "../assets/LogoAndText.png";
+import { createClient } from "@supabase/supabase-js";
+
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
-  const handleSignIn = (e) => {
+  //supabase auth
+  const supabaseUrl = "https://qkmpjjcwnfeizdxapuin.supabase.co";
+  const supabaseKey =
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFrbXBqamN3bmZlaXpkeGFwdWluIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTk2NDY2NjAsImV4cCI6MjAxNTIyMjY2MH0.UjBM9rlwJdiPdJOR1CGUVU67wBcAVzwWHqL0-mFCjsg";
+  const supabase = createClient(supabaseUrl, supabaseKey);
+
+  const handleSignIn = async (e) => {
     e.preventDefault();
-    // Handle sign in logic here
-    console.log("Email:", email, "Password:", password);
+
+    //handle log in auth:
+    try {
+      const { data, error } = await supabase.auth.signInWithPassword({
+        email: email,
+        password: password,
+      });
+      if (error) throw error;
+      console.log(data);
+      navigate("/dashboard");
+    } catch (error) {
+      alert(error);
+    }
   };
 
   return (
