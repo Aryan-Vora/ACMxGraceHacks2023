@@ -1,0 +1,143 @@
+.background {
+  background-image: url("../assets/background.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: auto;
+  height: 100vh;
+  background-position: center;
+  object-fit: cover;
+}
+.EHR-title {
+  margin-top: 400px;
+  margin: auto;
+  text-align: center;
+  background-color: transparent;
+}
+.uploadEHR-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+  height: 35vh;
+  margin: auto;
+  margin-top: 10vh;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  border-radius: 10px; /* Added for rounded corners */
+}
+
+.custom-file-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Space between icon and text */
+}
+
+.upload-icon {
+  /* Style as needed to represent the upload icon */
+  width: 150px;
+  height: 150px;
+  background-image: url("../assets/upload.png");
+  background-size: cover;
+}
+
+.filename {
+  /* Style for the filename placeholder */
+  font-size: 28px;
+  color: #333;
+}
+
+.filetype {
+  /* Style for the file type text center it*/
+  font-size: 16px;
+  margin-top: 10px;
+  color: #666;
+  text-align: center;
+}
+
+.upload-container {
+  height: 100vh;
+  width: 80vw;
+  margin: auto;
+  padding-top: 20vh;
+  background-color: transparent;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+.modal h2 {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.modal.visible {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  width: 70%;
+  height: 50%;
+}
+
+.confirm {
+  color: #e6f3ff;
+  font-family: Poppins;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  display: flex;
+  width: 16.875rem;
+  padding: 0.8125rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 0.625rem;
+  background: #1a90ff;
+  border: none;
+  margin-top: 1.25rem;
+}
+.pdf-container {
+  overflow-y: auto; /* Enable vertical scrolling */
+  max-height: 50vh; /* Adjust based on the available viewport height */
+}
+
+.cancel {
+  color: #e6f3ff;
+  font-family: Poppins;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  display: flex;
+  width: 16.875rem;
+  padding: 0.8125rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 0.625rem;
+  background: #ff1a1a;
+  border: none;
+  margin-top: 1.25rem;
+}
