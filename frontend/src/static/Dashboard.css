@@ -32,6 +32,17 @@
   font-style: normal;
   font-weight: 800;
   line-height: normal;
+  margin-top: -20px;
+  margin-bottom: -15px;
+}
+.dash-summary {
+  color: #1a90ff;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  width: 60%;
   margin-bottom: 5vh;
 }
 .dash-buttons {
@@ -45,7 +56,7 @@
   border-radius: 0.625rem;
   background: #1a90ff;
   color: #e6f3ff;
-  font-family: Poppins;
+  font-family: "Trebuchet MS", Arial, sans-serif;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 700;
@@ -62,9 +73,9 @@
   align-items: center;
   gap: 0.625rem;
   border-radius: 0.625rem;
-  background: #ff1a1a;
+  background: #5dc4ff;
   color: #e6f3ff;
-  font-family: Poppins;
+  font-family: "Trebuchet MS", Arial, sans-serif;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 700;

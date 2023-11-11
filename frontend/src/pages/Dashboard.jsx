@@ -10,12 +10,12 @@ function Dashboard() {
 
       <div className="dash-container">
         <h1 className="dash-subtitle">Welcome</h1>
+        <p className="dash-summary">
+          Enter your information to understand what medicine you take
+        </p>
 
-        <Link className="dash-buttons" to="/upload-medication">
-          Scan a Medication
-        </Link>
         <Link className="dash-buttons" to="/upload-ehr">
-          Update Medical Info
+          Upload Medical Info
         </Link>
         <Link className="dash-buttons2" to="/login">
           Logout
