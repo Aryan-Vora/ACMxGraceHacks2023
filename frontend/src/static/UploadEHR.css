@@ -10,17 +10,18 @@
 .EHR-back-button {
   text-decoration: none;
   padding-left: 10px;
-  color: black; /* Makes the text color always black */
-  position: relative; /* Enables positioning relative to its normal position */
-  top: 20px; /* Adjust this value to set the offset from the top */
-  left: 10px; /* Adjust this value to set the offset from the left */
+  color: black;
+  position: relative;
+  top: 20px;
+  left: 10px;
 }
 
 .EHR-title {
   margin-top: 400px;
-  margin: auto;
   text-align: center;
   background-color: transparent;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #1a90ff;
 }
 .uploadEHR-container {
   display: flex;
@@ -32,10 +33,10 @@
   max-width: 300px;
   height: 35vh;
   margin: auto;
-  margin-top: 10vh;
+  margin-top: 5vh;
   background-color: #f5f5f5;
   cursor: pointer;
-  border-radius: 10px; /* Added for rounded corners */
+  border-radius: 15px; /* Added for rounded corners */
 }
 
 .custom-file-upload {
@@ -72,7 +73,7 @@
   height: 100vh;
   width: 80vw;
   margin: auto;
-  padding-top: 20vh;
+  padding-top: 10vh;
   background-color: transparent;
 }
 
@@ -89,7 +90,7 @@
 }
 .modal h2 {
   color: #fff;
-  font-family: Poppins;
+  font-family: "Trebuchet MS", Arial, sans-serif;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 700;
@@ -102,7 +103,7 @@
 
 .modal-content {
   background: white;
-  padding: 20px;
+  padding: 10px;
   border-radius: 5px;
   text-align: center;
   width: 70%;
@@ -111,7 +112,7 @@
 
 .confirm {
   color: #e6f3ff;
-  font-family: Poppins;
+  font-family: "Trebuchet MS", Arial, sans-serif;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 700;
@@ -134,7 +135,7 @@
 
 .cancel {
   color: #e6f3ff;
-  font-family: Poppins;
+  font-family: "Trebuchet MS", Arial, sans-serif;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 700;
