@@ -26,11 +26,21 @@ function FinalAnalysis() {
       .then((res) => res.json())
       .then((data) => setMessage(data.human_response));
   }, []);
+  const BackIcon = () => (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M19 12H5M12 19l-7-7 7-7"></path>
+    </svg>
+  );
+  
   return (
-    <div>
-      <h1>Final Analysis</h1>
-      <p>Message from backend: {message}</p>
-      <Link to="/">Go back Home</Link>
+    <div className="background">
+<Link className="EHR-back-button" to="/dashboard">
+  <BackIcon />
+</Link>
+      <h1 className="final-analysis-title">Final Analysis</h1>
+      <div className="analysis-scrollable-container">
+        {message.human_response}
+      </div>
     </div>
   );
 }

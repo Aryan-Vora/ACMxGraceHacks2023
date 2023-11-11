@@ -1,0 +1,64 @@
+.analysis-scrollable-container {
+    max-height: 400px; /* Adjust the height as needed */
+    overflow-y: auto; /* Enables vertical scrolling */
+    padding: 15px;
+    border: 1px solid #ccc; /* Optional, for styling */
+    margin-top: 20px;
+    background-color: #f9f9f9; /* Optional, for styling */
+    height: 50vh;
+    width: 60vw;
+    margin-left: auto;
+    margin-right: auto;
+    color: #000;
+font-family: Roboto;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+word-wrap: break-word;
+overflow-x: hidden;
+  }
+  .final-analysis-title{
+    text-align: center;
+    color: #08C4FF;
+font-family: Roboto;
+font-size: 40px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+padding-top: 10vh;
+  }
+  .background {
+    background-image: url("../assets/background.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: auto;
+    height: 100vh;
+    background-position: center;
+    object-fit: cover;
+  }
+  .EHR-back-button {
+    text-decoration: none;
+    padding-left: 10px;
+    color: black; /* Makes the text color always black */
+    position: relative; /* Enables positioning relative to its normal position */
+    top: 20px; /* Adjust this value to set the offset from the top */
+    left: 10px; /* Adjust this value to set the offset from the left */
+  }
+  /* Additional styles for the scrollbar (optional) */
+  .analysis-scrollable-container::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .analysis-scrollable-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  .analysis-scrollable-container::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  .analysis-scrollable-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
