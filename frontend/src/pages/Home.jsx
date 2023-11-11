@@ -24,7 +24,7 @@ function Home() {
         Example message from backend: <strong>{message}</strong>
       </p>
       <div className="list">
-        <Link to="/">Go back Home</Link>
+        <Link to="/map">refresh</Link>
         <Link to="/upload-ehr">Upload EHR</Link>
         <Link to="/upload-medication">Upload Medication</Link>
         <Link to="/final-analysis">Final Analysis</Link>

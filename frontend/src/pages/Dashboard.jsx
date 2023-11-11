@@ -1,34 +1,24 @@
-import "../static/UploadEHR.css";
-
-const LandingPage = () => {
+import "../static/Dashboard.css";
+import { Link } from "react-router-dom";
+function Dashboard() {
   return (
-    <div className="landing-container">
-      {/* Logo and Title */}
-      <div className="header">
-        <img src="path-to-your-logo.png" alt="Logo" />
-        <h1>Understand your Medicine</h1>
-      </div>
+    <div className="background">
+      <h1 className="dash-title">Dashboard</h1>
+      <div className="dash-container">
+        <h1 className="dash-subtitle">Hello Amritha P</h1>
 
-      {/* Feature List */}
-      <div className="features">
-        {/* Repeat for each feature */}
-        <div className="feature-item">
-          <img src="path-to-icon.png" alt="Upload Icon" />
-          <p>Upload Health Data</p>
-        </div>
-        {/* ... other features */}
+        <Link className="dash-buttons" to="/upload-medication">
+          Scan a Medication
+        </Link>
+        <Link className="dash-buttons" to="/upload-ehr">
+          Update Medical Info
+        </Link>
+        <Link className="dash-buttons2" to="/login">
+          Logout
+        </Link>
       </div>
-
-      {/* Call to Action Button */}
-      <button className="get-started-btn" onClick={handleClick}>
-        Get Started
-      </button>
     </div>
   );
-};
+}
 
-const handleClick = () => {
-  // Implement what happens when the button is clicked
-};
-
-export default LandingPage;
+export default Dashboard;
