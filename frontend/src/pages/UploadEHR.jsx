@@ -34,14 +34,26 @@ function UploadEHR() {
       };
       reader.readAsDataURL(file);
     }
-    console.log(selectedFile);
+    console.log(selectedFile);    
   };
   const navigate = useNavigate(); // Hook to get navigate function
 
   // Handler for confirming file upload
   const handleConfirmUpload = () => {
     // Implement file upload logic here
+    const formData = new FormData();
+    formData.append('pdf', selectedFile);
     setIsModalVisible(false);
+    fetch("/api/download",{
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: formData,
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+    
     navigate("/upload-medication");
   };
 

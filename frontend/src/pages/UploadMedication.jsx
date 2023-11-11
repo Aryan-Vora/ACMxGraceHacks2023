@@ -30,8 +30,24 @@ function UploadMedication() {
 
   // Handler for confirming file upload
   const handleConfirmUpload = () => {
+    const formData = new FormData();
+    try{
+      formData.append('jpg', selectedFile);
+    }
+    catch(err){
+      formData.append('png', selectedFile);
+    }
     // Implement file upload logic here
     setIsModalVisible(false);
+    fetch("/api/download",{
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: formData,
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
     navigate("/upload-back");
   };
 
